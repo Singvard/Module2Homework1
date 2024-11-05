@@ -33,7 +33,7 @@ public class Task3 {
     }
 
     /**
-     * Метод вывод в консоль сообщения с предлежением ввести делимое и делитель,
+     * Метод выводит в консоль сообщения с предлежением ввести делимое и делитель,
      * а затем парсит указанные пользователь в целое число. В случае неудачи метод
      * передает на уровень выше соотвествующие исключение.
      *
@@ -43,12 +43,11 @@ public class Task3 {
      */
     private static int[] inputInt() throws NoSuchElementException, IllegalStateException {
         var result = new int[2];
-        try (Scanner scanner1 = new Scanner(System.in);
-             Scanner scanner2 = new Scanner(System.in)) {
+        try (Scanner scanner = new Scanner(System.in)) {
             System.out.print("Введите делимое (целое число): ");
-            result[0] = scanner1.nextInt();
+            result[0] = scanner.nextInt();
             System.out.print("Введите делитель (целое число): ");
-            result[1] = scanner2.nextInt();
+            result[1] = scanner.nextInt();
         }
         return result;
     }
